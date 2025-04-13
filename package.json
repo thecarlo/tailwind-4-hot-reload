@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "postcss src/tailwind.css -o src/index.css --env production",
-    "serve": "npm-run-all --parallel watch:styles serve:dev",
+    "serve": "npm run build && npm-run-all --parallel watch:styles serve:dev",
     "watch:styles": "nodemon --watch src/tailwind.css --watch src/index.html --exec \"npm run build\"",
     "serve:dev": "browser-sync start --server 'src' --files 'src/index.css, src/index.html'"
   },
