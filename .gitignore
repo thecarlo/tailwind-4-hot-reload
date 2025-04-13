@@ -1,5 +1,5 @@
 # exclude generated .css
-index.css
+src/index.css
 
 # Dependencies
 node_modules/
